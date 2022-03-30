@@ -1,4 +1,4 @@
-package cl.sangut.heroesfightapp.views
+package cl.sangut.heroesfightapp.views.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
