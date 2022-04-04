@@ -4,7 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import cl.sangut.heroesfightapp.R
 import cl.sangut.heroesfightapp.databinding.FighterItemBinding
 
@@ -34,14 +38,11 @@ class FighterItemAdapter : Fragment() {
     val detailsButton = _binding?.fighterDetailsButton
 
     detailsButton?.setOnClickListener {
-      val fighterDetailsFragment = FighterDetails()
-
-      activity
-        ?.supportFragmentManager
-        ?.beginTransaction()
-        ?.replace(R.id.frame_container, fighterDetailsFragment)
-        ?.addToBackStack("tag")
-        ?.commit()
+      // si quiero entregar parámetros, se utiliza
+      // bundle para pasar el valor del parametro (con safe args)
+      val bundle = bundleOf("fighterName" to "Spider Woman")
+      // se llama a la navegacion
+      Navigation.findNavController(it).navigate(R.id.action_fighterListFragment_to_fighterDetails, bundle)
     }
   }
 

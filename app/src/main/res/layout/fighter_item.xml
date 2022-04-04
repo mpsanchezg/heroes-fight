@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:id="@+id/fighterItem"
     android:background="@color/primary_light"
-    tools:context=".views.FighterItemAdapter">
+    tools:context=".views.home.FighterItemAdapter">
 
     <ImageView
         android:id="@+id/fighterImageView"
