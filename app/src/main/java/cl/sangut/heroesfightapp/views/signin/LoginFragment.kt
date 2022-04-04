@@ -1,12 +1,14 @@
-package cl.sangut.heroesfightapp.views
+package cl.sangut.heroesfightapp.views.signin
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import cl.sangut.heroesfightapp.R
 import cl.sangut.heroesfightapp.databinding.LoginFragmentBinding
+import cl.sangut.heroesfightapp.views.home.FighterListFragment
 
 
 class LoginFragment : Fragment() {
@@ -35,12 +37,7 @@ class LoginFragment : Fragment() {
     val loginButton = _binding?.loginButton
 
     loginButton?.setOnClickListener {
-      val fighterListFragment = FighterListFragment()
-      activity
-        ?.supportFragmentManager
-        ?.beginTransaction()
-        ?.replace(R.id.frame_container, fighterListFragment)
-        ?.commit()
+      findNavController().navigate(R.id.action_loginFragment2_to_statistics_navigation)
     }
   }
 }
