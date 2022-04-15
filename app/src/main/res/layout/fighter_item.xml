@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/fighterItem"
-    android:background="@color/primary_light"
-    tools:context=".views.home.FighterItemAdapter">
+    android:background="@color/primary_light">
 
     <ImageView
         android:id="@+id/fighterImageView"
-        android:layout_width="54dp"
-        android:layout_height="match_parent"
+        android:layout_width="54sp"
+        android:layout_height="54sp"
         android:layout_weight="1"
         tools:srcCompat="@tools:sample/avatars"
         android:layout_margin="8sp"
@@ -21,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_weight="4"
+        android:layout_weight="99"
         >
         <TextView
             android:layout_width="wrap_content"
@@ -29,7 +27,7 @@
             android:id="@+id/fighterNameTextView"
             android:textColor="@color/secondary_title"
             android:text="@string/fighter_name"
-            android:textSize="32sp"/>
+            android:textSize="28sp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -37,16 +35,7 @@
             android:id="@+id/fighterTypeTextView"
             android:textColor="@color/normal_text"
             android:text="@string/fighter_type"
-            android:textSize="24sp"/>
+            android:textSize="20sp"/>
     </LinearLayout>
-
-    <Button
-        android:id="@+id/fighterDetailsButton"
-        style="@style/Widget.Material3.Button.TextButton.Icon"
-        android:layout_width="@dimen/arrow_button_size"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:contentDescription="@string/fighter_details_button"
-        app:icon="@drawable/ic_right_arrow" />
 
 </LinearLayout>
