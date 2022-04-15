@@ -15,4 +15,5 @@
     <color name="background_color">#FFE1E1</color>
     <color name="secondary_title">#FF5151</color>
     <color name="normal_text">#FF7676</color>
+    <color name="bottom_menu">#FF5151</color>
 </resources>

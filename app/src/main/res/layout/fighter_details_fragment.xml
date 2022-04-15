@@ -4,7 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.FighterDetails">
+    tools:context=".views.home.FighterDetails">
+
+    <TextView
+        android:id="@id/fighterNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/fighterImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="@dimen/title_size"
+        android:fontFamily="@font/roboto"
+        android:text="@string/fighter_name"
+        android:textColor="@color/title"/>
 
     <TextView
         android:id="@+id/intelligenceTextView"

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="cl.sangut.heroesfightapp.views.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_fighterListFragment"
+            app:destination="@id/fighterListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fighterListFragment"
+        android:name="cl.sangut.heroesfightapp.views.home.FighterListFragment"
+        android:label="Fighters"
+        tools:layout="@layout/fragment_fighter_list" >
+        <action
+            android:id="@+id/action_fighterListFragment_to_fighterDetails"
+            app:destination="@id/fighterDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/fighterDetails"
+        android:name="cl.sangut.heroesfightapp.views.home.FighterDetails"
+        tools:layout="@layout/fighter_details_fragment">
+        <argument
+            android:name="fighterName"
+            android:defaultValue="Fighter"
+            app:argType="string" />
+    </fragment>
+</navigation>

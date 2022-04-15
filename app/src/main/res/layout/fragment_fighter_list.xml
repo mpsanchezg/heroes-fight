@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.FighterListFragment"
+    tools:context=".views.home.FighterListFragment"
     android:id="@+id/fragmentFighterList"
     android:background="@color/background_color" >
 
@@ -25,24 +25,36 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.2" />
 
-    <EditText
-        android:id="@+id/editTextSearchFighter"
-        android:drawableStart="@drawable/search_icon"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:textColorHint="@color/hint"
         android:background="@drawable/hero_input"
-        android:textSize="@dimen/search_text_size"
-        android:paddingStart="12sp"
-        android:paddingEnd="@dimen/search_right_padding"
-        android:paddingVertical="@dimen/input_vertical_padding"
-        android:hint="@string/search_fighter"
+        android:padding="100sp"
         app:layout_constraintBottom_toTopOf="@+id/fighterListGuideline"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
+        <EditText
+            android:id="@+id/editTextSearchFighter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/hero_input"
+            android:drawableStart="@drawable/search_icon"
+            android:hint="@string/search_fighter"
+            android:inputType="textPersonName"
+            android:paddingVertical="@dimen/input_vertical_padding"
+            android:paddingStart="12sp"
+            android:paddingEnd="@dimen/search_right_padding"
+            android:textColorHint="@color/hint"
+            android:textSize="@dimen/search_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
