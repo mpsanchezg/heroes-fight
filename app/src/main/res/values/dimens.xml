@@ -19,4 +19,5 @@
     <dimen name="search_right_padding">28sp</dimen>
     <dimen name="search_text_size">24sp</dimen>
     <dimen name="arrow_button_size">24dp</dimen>
+    <dimen name="list_height_size">490sp</dimen>
 </resources>
