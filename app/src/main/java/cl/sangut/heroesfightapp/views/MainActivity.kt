@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -28,7 +29,10 @@ class MainActivity : AppCompatActivity() {
     val navigationView: BottomNavigationView = binding?.navigationView!!
 
     // buscamos el nav host
-    navigationController = findNavController(R.id.nav_host_fragment_activity_main)
+    val navHostFragment =
+      (supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main)) as NavHostFragment
+    navigationController = navHostFragment.navController
+
     NavigationUI.setupActionBarWithNavController(this, navigationController)
 
     // seteamos las navegaciones que van en la barra
