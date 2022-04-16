@@ -1,17 +1,14 @@
 package cl.sangut.heroesfightapp.views.home
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import cl.sangut.heroesfightapp.R
@@ -26,6 +23,9 @@ class FighterListFragment : Fragment(), FighterItemAdapter.ActionListener {
   private val allFighters = Fighters.createFighterList()
   private var _binding: FragmentFighterListBinding? = null
   private val binding get() = _binding!!
+
+  private var mLastClickTime = System.currentTimeMillis()
+  private val CLICK_TIME_INTERVAL: Long = 300
 
   override fun onCreateView(
     inflater: LayoutInflater,
@@ -86,6 +86,17 @@ class FighterListFragment : Fragment(), FighterItemAdapter.ActionListener {
     Toast.makeText(context, "hola! hiciste click en el ${fighter.fullName}", Toast.LENGTH_LONG).show()
     /* ir al Fragment Fighter Details */
     // usando safe args...
+
+    /* -> El siguiente codigo es para que al apretar dos items, no se caiga la app */
+    val now = System.currentTimeMillis()
+    if (now - mLastClickTime < CLICK_TIME_INTERVAL) {
+      return;
+    }
+
+    mLastClickTime = now;
+    /* -> hasta aqui <- */
+
+    // aqui mandamos el fullName del fighter seleccionado
     val bundle = bundleOf("fighterName" to fighter.fullName.toString())
     // llamamos la accion para navegar y el argumento entregado
     findNavController().navigate(R.id.action_fighterListFragment_to_fighterDetails, bundle)
