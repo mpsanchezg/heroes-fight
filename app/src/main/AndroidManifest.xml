@@ -9,10 +9,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_hero_example"
         android:supportsRtl="true"
-        android:theme="@style/Theme.HeroesFightApp" >
+        android:theme="@style/Theme.HeroesFightApp">
         <activity
             android:name=".views.MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:windowSoftInputMode="adjustNothing">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
