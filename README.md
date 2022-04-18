@@ -4,13 +4,20 @@ Esta aplicación consiste en un juego para Android, donde podrán elegir un hér
 
 Durante el semestre veremos clase a clase ejemplos de los contenidos dentro de esta app.
 
-## Clase 4: Navegación
+## Clase #6: RecyclerViews
 
 ### TODO
-Se crean las siguientes navegaciones
-  1. User signin navigation
-  2. Profile navigation
-  3. Home navigation
-  4. Battle navigation
+Cambiar el FrameLayout por un RecyclerView
 
-Todo esto, se parte con un archivo .xml del tipo navegación, se agrega un menu para el bottom navigation y se instancia en el main layout. Luego, se maneja la navegación desde el activity main.
+Recordar que para crear un RecyclerView, hay que tener en cuenta lo siguiente:
+* LayoutManager
+* RecyclerView.Adapter
+* ViewHolder
+  
+Para ello deberán seguir los siguientes pasos:
+* Agregar un RecyclerView a la vista en cuestión.
+* Tener un layout con el item que se quiere agregar a la lista.
+* Crear un Adapter que herede de `RecyclerView.Adapter<FighterItemAdapter.ViewHolder>()`.
+* Poner en la inner class `ViewHolder` los elementos del item que se quieren personalizar/cambiar/editar/agregar funcionalidades.
+* Poner en el Fragment que controla el RecyclerView el LayoutManager y agregar el Adapter al RecyclerView.
+

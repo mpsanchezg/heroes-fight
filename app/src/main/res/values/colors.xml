@@ -16,4 +16,6 @@
     <color name="secondary_title">#FF5151</color>
     <color name="normal_text">#FF7676</color>
     <color name="bottom_menu">#FF5151</color>
+    <color name="primary_light_pressed">#FFA7A7</color>
+    <color name="item_stroke">#BCFF7676</color>
 </resources>
