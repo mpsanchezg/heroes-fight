@@ -10,7 +10,6 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import cl.sangut.heroesfightapp.R
 import cl.sangut.heroesfightapp.databinding.ActivityMainBinding
-import cl.sangut.heroesfightapp.views.signin.LoginFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -33,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
     // seteamos las navegaciones que van en la barra
     val appBarConfiguration = AppBarConfiguration(
-      setOf(R.id.nav_graph)
+      setOf(R.id.home_navigation, R.id.battle_navigation, R.id.profile_navigation)
     )
     // seteamos el action bar con el navigation controller y la confiuración creada
     setupActionBarWithNavController(navigationController, appBarConfiguration)

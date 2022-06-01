@@ -4,7 +4,7 @@ Esta aplicación consiste en un juego para Android, donde podrán elegir un hér
 
 Durante el semestre veremos clase a clase ejemplos de los contenidos dentro de esta app.
 
-## Clase #6: RecyclerViews
+## Clase #11: Geolocalización
 
 ### TODO
 Cambiar el FrameLayout por un RecyclerView
